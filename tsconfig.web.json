@@ -4,7 +4,6 @@
     "src/renderer/src/env.d.ts",
     "src/renderer/src/**/*",
     "src/renderer/src/**/*.tsx",
-    "src/shared/**/*"
   ],
  "files": ["src/preload/index-ui.d.ts","src/preload/index-web.d.ts"],
   "compilerOptions": {

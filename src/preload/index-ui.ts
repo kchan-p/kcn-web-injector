@@ -2,8 +2,7 @@ import { contextBridge, ipcRenderer } from 'electron'
 
 const api = {
   loadPage: (url: string): Promise<null | undefined> => ipcRenderer.invoke('loadPage', url),
-  insertCss: (css: string, key: null | string): Promise<null | string> =>
-    ipcRenderer.invoke('insertCss', css, key),
+  insertCss: (css: string): Promise<null | string> => ipcRenderer.invoke('insertCss', css),
   insertJs: (js: string): Promise<null> => ipcRenderer.invoke('insertJs', js),
   insertHtml: (selector: string, html: string, position: string) =>
     ipcRenderer.invoke('insertHtml', selector, html, position)
