@@ -1,0 +1,102 @@
+*{
+box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+div{
+  padding: 0;
+  margin: 0;
+}
+p{
+margin: 2px;
+}
+#root{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main,.tab_area,.tab_content_wrap,.tab_content{
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+main,.tab_area,.tab_content_wrap,.tab_content,.codemirror-editor{
+  flex:1;
+}
+.load-wrap{
+  margin-bottom: 5px;
+}
+.load-wrap input{
+  width: 300px;
+  margin-left: 5px;
+}
+.tab_area {
+  padding: 0;
+  width: 100%;
+}
+
+.tab_label_wrap {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction:row;
+}
+
+.tab_label {
+  padding: 2px;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+  background: gray;
+  cursor: pointer;
+}
+.tab_label.activeTab {
+  background: aqua;
+  color: blue;
+}
+
+.tab_content {
+  width: 100%;
+  background: lightyellow;
+}
+
+.tab_content.activeTab {
+  display: flex;
+}
+.tab_content:not(.activeTab) {
+  display: none;
+}
+.tab_content_wrap {
+  width: 100%;
+  border-top: 2px solid black;
+}
+.codemirror-button-wrap{
+  padding: 2px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.codemirror-editor{
+  overflow: auto;
+  padding-bottom:10px ;
+}
+.cm-editor {
+  overflow: auto;
+  min-height: 500px;
+}
+
+.peer:checked~.peer-checked\:border-indigo-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(79 70 229 / var(--tw-border-opacity));
+}
+
+.insert_html_option{
+  border: 1px dotted gray;
+  padding: 2px 5px;
+  margin-top: 1px;
+}
